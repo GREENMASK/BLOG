@@ -1,0 +1,7 @@
+<p><b> Coments
+    <ul>
+    <% @post.comments.each do |comment|  %>
+        <li> <%= comment.content %> </li>
+    <% end %>
+   </ul>
+</b></p>

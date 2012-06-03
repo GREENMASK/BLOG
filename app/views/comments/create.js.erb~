@@ -1,0 +1,2 @@
+$("div#count").html("<%= post.comments.count %>");
+$("div#comments").append("<%= escape_javascript(<%= render 'comments/comments')%>");

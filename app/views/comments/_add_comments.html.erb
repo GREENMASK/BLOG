@@ -1,0 +1,7 @@
+<div id="count"><%= @post.comments.count %></div>
+<%= form_for(@post.comments.new, :url => "/posts/#{@post.id}/comments",:remote => true) do |f| %>
+  <p>
+   <%= f.text_area :content %>
+  </p>
+   <p><%=f.submit %></p>
+<%end%>

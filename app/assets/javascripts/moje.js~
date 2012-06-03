@@ -1,0 +1,11 @@
+
+jQuery.ajaxSetup({'beforeSend': function(xhr){xhr.setRequestHeader("Accept","text/javascirpt")}
+
+});
+
+$(document).ready(function(){
+  $("#new_comment").submit(function(){
+    $.post($(this).attr("action")+'.js' ,$(this).serialize(),null,"script" );
+   return false;
+   });
+ });

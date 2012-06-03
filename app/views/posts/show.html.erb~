@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @post.title %>
+</p>
+
+<p>
+  <b>Context:</b>
+  <%= @post.context %>
+</p>
+<p><b> Categories:
+   
+    <% @post.categories.each do |category|  %>
+         <%= category.name %>  
+    <% end %>
+<div id ="comments">
+<p><b> Coments
+    <ul>
+    <% @post.comments.each do |comment|  %>
+        <li> <%= comment.content %> </li>
+    <% end %>
+   </ul>
+</b></p>
+<div>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
+</br>
+<h3> Add Comment </h3>
+
+<div id="add_comment">
+  <%= render 'comments/add_comments'%>
+</div>
+
+
+
+
+
+
